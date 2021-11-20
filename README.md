@@ -1,2 +1,2 @@
-# 642-individual-assignment
+# CSC642-individual-assignment
 642 Individual Assgnment
