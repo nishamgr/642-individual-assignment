@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: plum;
+    font-family: work sans-serif;
+    border: 12px solid black;
+}
+    
+.container{
+    background-color:white;
+    width: 50%;
+    height:auto;
+
+}
+
+#survey-form{
+   border-radius: 5px;
+  background-color: gray;
+  padding: 50px;
+}
+
+.center-div{
+   width: 30%;
+  margin: auto;
+  display: block;
+  padding: 10px;
+
+}
+
+.form-control {
+    border: 2px solid gray;
+    background-color: white;
+    padding: 10px;
+
+}
+.wrapper{
+    margin:0 auto;
+}
+@media screen and (max-width:600px){
+    forms{
+        width:100%;
+        margin:auto;
+    }
+}
+
+  
+
+  

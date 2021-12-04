@@ -1,0 +1,250 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Survey Page</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <!--Stylesheet-->
+    <link href="stylesheet.css" rel="stylesheet">
+
+    <!--Captcha-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+  </head>
+  <body>
+    <div class="container p-5 bg-purple text-black text-center">
+        <h1>Data Survey Form</h1>
+        <p>Please, Kindly fill out the form below.</p>
+    </div>
+          <!--text input for last and first name-->
+        <div class="container">
+          <form id="registrationForm" method="post" action="verify.php" data-toggle="validator">
+          <div class="row">
+              <div class="col-md">
+                  <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" pattern="[a-zA-Z]+" name="lastName" required>
+              </div>
+            </div>
+              <div class="col-md">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Enter your first name" pattern="[a-zA-Z]+" name="firstName" required>
+              </div>
+              <div class="row">
+                  <div class="col-md">
+                      <div class="mb-3">
+                      <label for="Address" class="form-label">Address</label>
+                      <input type="Address" class="form-control" id="address" placeholder="Enter your street address" pattern="[a-zA-Z0-9-,]+" name="address" required>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md">
+                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                        <input type="phoneNumber" class="form-control" id="phoneNumber" placeholder="Enter 10-digit number" pattern="[0-9]{10}" name="phoneNumber" requird>
+                  </div>
+                  <div class="col-md">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md">
+                        <label for="title" class="form-label">Title</label>
+                        <select type="title" class="form-control" id="title" name="title" required>
+                            <option value="">Choose preferred title</option>
+                            <option>None</option>
+                            <option>Student</option>
+                            <option>Professor</option>
+                            <option>Staff</option>
+                            <option>Retired</option>
+                        </select>
+                    </div>
+                    <div class="col-md">
+                        <label for="monthlyBudget" class="form-label">What is your monthly budget?</label>
+                        <select type="monthlyBudget" class="form-control" id="monthlyBudget" name="monthlyBudget">
+                            <option value="">Choose preferred option</option> 
+                            <option> < $50 </option>
+                            <option> $50 - $100 </option>
+                            <option> >$100 </option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="height" class="form-label">How tall are you?</label>
+                            <div class="row">
+                                <div class="col-md">
+                                    <input type="text" class="form-control" placeholder="Inches" name="Inches">
+                                </div>
+                                <div class="col-md">
+                                    <input type="text" class="form-control" placeholder="Feet" name="Feet">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group col-md has-feedback">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" pattern="[a-zA-Z0-9]+" required> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group col-md">
+                                <label for="passwordConfirmation">Confirm Password</label>
+                                <input type="password" class="form-control" id="passwordConfirmation" placeholder="Re-Enter password" pattern="[a-zA-Z0-9]+" name="passwordConfirmation" required\\>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group col-md">
+                                <div class="g-recaptcha" data-sitekey="6LfS6GAdAAAAADaCUpm_O_nxplQn2c_qtDkGGzf0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-md">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-outline-primary">Submit</button>
+                        <button tyoe="cancel" class="btn btn-outline-warning">Cancel</button>
+
+                    </div>
+                </div>
+          </div>
+          <div class="policy-check mb-3 text-center">
+            <label class="policy-check-label">
+            <input class="policy-check-input" type="checkbox" name="agree" required> I agree to the privacy and User Agreement.
+          </label>
+          </form>
+          </div>
+          </div>
+      
+
+
+
+
+        <!-- Optionacl JavaScript -->
+        <!-- Popper.js first, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        
+
+
+<!--Field Validation-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#registrationForm').bootstrapValidator({
+        feedbackIcons:{
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphican glyphican-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            lastName: {
+                validators: {
+                    max: 40
+                },
+                notEmpty: {
+                    message: 'Enter your first name.'
+                }
+            }
+        },
+        firstName: {
+            validators: {
+                stringLength: {
+                    max:40
+                },
+                notEmpty: {
+                    message: 'Enter your last name.'
+                }
+            }
+        },
+        address: {
+            validators: {
+                stringLength: {
+                max:200
+                },
+                notEmpty: {
+                    message: 'Enter your address.'
+                }
+            }
+        },
+        phoneNumber: {
+            validators: {
+                numeric: {
+                    message: 'Enter 10-digit phone number.'
+                },
+                notEmpty: {
+                    message: 'Enter your 10-digit phone number.'
+                }
+            }
+
+        },
+        email: {
+            validators: {
+                notEmpty: {
+                    message: 'Enter your E-mail.'
+                },
+                emailAddrress: {
+                    message: 'Enter a valid email'
+                }
+            }
+        },
+        title: {
+            validators: {
+                notEmpty: {
+                    message: 'Choose preffered title.'
+                }
+            }
+        },
+        monthlyBudget: {
+            validators: {
+                notEmpty: {
+                    message: 'Choose preffered budget.'
+                }
+            }
+        },
+        password: {
+            validators: {
+                notEmpty: {
+                    message: 'Enter the password.'
+                }
+            }
+        },
+        passwordConfirmation: {
+            validators: {
+                notEmpty: {
+                    message: 'You need to have identical password.'
+                },
+                identical: {
+                    field: 'password',
+                    message: 'Re-enter your password.'
+                }
+            }
+        },
+        agree: {
+            validators: {
+                notEmpty: {
+                    message: 'Please agree to the terms and conditions.'
+                }
+            }
+        },  
+    })
+
+});
+
+</script>
+</body>
+</html>
+
+
